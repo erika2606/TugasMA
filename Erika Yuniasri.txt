@@ -1,0 +1,141 @@
+using System;
+
+namespace Lat1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nama;
+            Console.Write("\n Masukkan Nama Anda: ");
+            nama = Console.ReadLine();
+                Console.WriteLine("\n Semangat Belajar {0}", nama);
+
+            // Operator Aritmatika dan Penggunaan If Else
+            string nim, nabsen, ntugas, nuts, nuas;
+            double nakhir, n_absen, n_tugas, n_uts, n_uas;
+
+            Console.Write("\n Operator Aritmatika dan Penggunaan If Else");
+            Console.Write("\n ------------------------------------------");
+            Console.Write("\n NIM: ");
+            nim = Console.ReadLine();
+            Console.Write("\n Nilai Absensi: ");
+            nabsen = Console.ReadLine();
+            Console.Write("\n Nilai Tugas: ");
+            ntugas = Console.ReadLine();
+            Console.Write("\n Nilai UTS: ");
+            nuts = Console.ReadLine();
+            Console.Write("\n Nilai UAS: ");
+            nuas = Console.ReadLine();
+            n_absen = Convert.ToDouble(nabsen);
+            n_tugas = Convert.ToDouble(ntugas);
+            n_uts = Convert.ToDouble(nuts);
+            n_uas = Convert.ToDouble(nuas);
+                nakhir = (n_absen * 10 / 100) + (n_tugas * 20 / 100) + (n_uts * 30 / 100) + (n_uas * 40 / 100);
+            Console.WriteLine("\n Nilai Akhir {0}", nakhir);
+            // Penggunaan If Else
+            if (nakhir >= 80)
+            {
+                Console.WriteLine("Grade    : A");
+            }
+            else if(nakhir >= 70)
+            {
+                Console.WriteLine("Grade    : B");
+            }
+            else if (nakhir >= 60)
+            {
+                Console.WriteLine("Grade    : C");
+            }
+            else if (nakhir >= 50)
+            {
+                Console.WriteLine("Grade    : D");
+            }
+            else
+            {
+                Console.WriteLine("Grade    : E");
+            }
+
+            // Operator Relasi
+            string e, f;
+            bool merah, kuning, hijau, biru, ungu, hitam;
+            int var_e, var_f;
+
+            Console.Write("\n Operator Relasi");
+            Console.Write("\n Input Nilai e: ");
+            e = Console.ReadLine();
+            Console.Write("\n Input Nilai f: ");
+            f = Console.ReadLine();
+
+            var_e = Convert.ToInt16(e);
+            var_f = Convert.ToInt16(f);
+
+            merah = var_e > var_f;
+            kuning = var_e < var_f;
+            hijau = var_e >= var_f;
+            biru = var_e <= var_f;
+            ungu = var_e == var_f;
+            hitam = var_e != var_f;
+
+            Console.WriteLine("\n apakah e lebih besar dari f ? {0}", merah);
+            Console.WriteLine("\n apakah e lebih kecil dari f ? {0}", kuning);
+            Console.WriteLine("\n apakah e lebih besar sama dengan f ? {0}", hijau);
+            Console.WriteLine("\n apakah e lebih kecil sama dengan f ? {0}", biru);
+            Console.WriteLine("\n apakah e sama dengan f ? {0}", ungu);
+            Console.WriteLine("\n apakah e tidak sama dengan f ? {0}", hitam);
+
+            // switch Case
+            Console.Write("\n Penggunaan Switch");
+            Console.Write("\n ------------------------------------------");
+            Console.WriteLine("Kata sandi salah, coba lagi");
+            Console.Write("Masukkan kata sandi: ");
+            string katasandi = Console.ReadLine();
+
+            switch (katasandi)
+            {
+            case "akusayangkamu":
+            Console.Clear();
+            Console.WriteLine("Selamat belajar di ruang ini");
+            break;
+            default:
+            Console.Clear();
+            Console.WriteLine("Anda tidak berhak masuk ke ruang ini");
+            break;
+            }
+
+            // Looping
+            Console.Write("\n Looping For");
+            Console.Write("\n ------------------------------------------");
+            for (int angka = 2; angka <=15; angka++)
+            {
+                Console.WriteLine("\n Angka Ke-" + angka.ToString());
+            }
+          
+            Console.Write("\n Looping While");
+            Console.Write("\n ------------------------------------------");
+            int z = 2;
+            while (z <= 14)
+            {
+                Console.WriteLine("\n Lagi latihan C# " +z);
+                z++;
+            }
+            Console.Write("\n Looping Do While");
+            Console.Write("\n ------------------------------------------");
+            do
+            {
+                Console.WriteLine("\n  Nilai z= " + z);
+                z++;
+            }
+            while (z <= 7);
+            
+            Console.Write("\n Foreach");
+            Console.Write("\n ------------------------------------------");
+            string[] Stringarray = { "satu", "dua", "tiga" };
+            foreach (string element in Stringarray)
+            {
+                Console.WriteLine(element + " ");
+            }
+            Console.Read();
+        }
+        
+    }
+}
